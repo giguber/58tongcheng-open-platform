@@ -27,6 +27,14 @@
 - 本地开发：`http://localhost:8080/callback`
 - 正式环境：待定（部署后填写）
 
+### ⚠️ 回调地址格式要求
+
+58 开放平台要求回调地址为**完整的公网 HTTP/HTTPS URL**：
+
+- ✅ `https://api.example.com/callback`（公网域名）
+- ✅ `http://api.example.com/callback`（公网域名，HTTP 也可）
+- ❌ `http://localhost:8080/callback`（本地地址，带端口，通常不被接受）
+
 ## 相关链接
 
 - 开放平台官网：https://open.58.com
