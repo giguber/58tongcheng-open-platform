@@ -20,20 +20,19 @@
 - 仓库内：`logo.png`（512×512，蓝色 58 图标）
 - 直链：https://raw.githubusercontent.com/giguber/58tongcheng-open-platform/main/logo.png
 
-### 回调地址（Callback URL）
+### 回调地址（Callback URL）✅
 
-> 用于 OAuth 授权登录/授权回调，注册应用时按需填写。
+> GitHub Pages 托管，公网 HTTPS 可访问：
 
-- 本地开发：`http://localhost:8080/callback`
-- 正式环境：待定（部署后填写）
+- **正式地址：** `https://giguber.github.io/58tongcheng-open-platform/`
+- 落地页：https://giguber.github.io/58tongcheng-open-platform/ （已部署，200 OK）
 
 ### ⚠️ 回调地址格式要求
 
 58 开放平台要求回调地址为**完整的公网 HTTP/HTTPS URL**：
 
-- ✅ `https://api.example.com/callback`（公网域名）
-- ✅ `http://api.example.com/callback`（公网域名，HTTP 也可）
-- ❌ `http://localhost:8080/callback`（本地地址，带端口，通常不被接受）
+- ✅ `https://giguber.github.io/58tongcheng-open-platform/`（公网 HTTPS）
+- ❌ `http://localhost:8080/callback`（本地地址，带端口，不被接受）
 
 ## 相关链接
 
