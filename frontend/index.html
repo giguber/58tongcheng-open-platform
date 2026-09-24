@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>58本地生活 - 应用模板</title>
+  <style>
+    body { font-family: "PingFang SC", "Microsoft YaHei", sans-serif; margin: 0; background: #f5f7fa; }
+    .header { background: #0078d7; color: #fff; padding: 24px; text-align: center; }
+    .header img { width: 64px; height: 64px; border-radius: 12px; vertical-align: middle; }
+    .card { background: #fff; border-radius: 8px; padding: 20px; margin: 16px auto; max-width: 640px; box-shadow: 0 1px 4px rgba(0,0,0,.08); }
+    input, button { padding: 8px 12px; font-size: 14px; border-radius: 6px; border: 1px solid #ddd; }
+    button { background: #0078d7; color: #fff; border: none; cursor: pointer; }
+    pre { background: #f0f0f0; padding: 12px; border-radius: 6px; overflow: auto; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <img src="https://raw.githubusercontent.com/giguber/58tongcheng-open-platform/main/logo.png" alt="logo">
+    <h1>58本地生活 - 应用模板</h1>
+    <p>基于 58同城开放平台的本地生活信息聚合应用（衡阳优先）</p>
+  </div>
+  <div class="card">
+    <h3>信息检索（粗胚演示）</h3>
+    <input id="q" placeholder="关键词，如：租房" value="租房">
+    <button onclick="search()">搜索</button>
+    <pre id="out">等待查询…</pre>
+  </div>
+  <script>
+    async function search() {
+      const q = document.getElementById('q').value;
+      const res = await fetch('/api/search?city_id=&cate_id=&q=' + encodeURIComponent(q));
+      const data = await res.json();
+      document.getElementById('out').textContent = JSON.stringify(data, null, 2);
+    }
+  </script>
+</body>
+</html>
